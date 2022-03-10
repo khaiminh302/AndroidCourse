@@ -1,2 +1,2 @@
 # AndroidCourse
-Repository for FETEL Android course, Spring 2022
+Repository for FETEL Android Course, spring 2022.
