@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/welcome_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:contentDescription="background image"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/background" />
+
+    <ImageView
+        android:id="@+id/welcome_gradient"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="TODO"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="@+id/welcome_background"
+        app:layout_constraintTop_toTopOf="@+id/welcome_background"
+        app:srcCompat="@drawable/background_gradient" />
+
+    <Button
+        android:id="@+id/skip_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/skip_button_text"
+        android:textAllCaps="false"
+        android:textColor="@color/orange"
+        app:cornerRadius="27dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/welcome_to_text"
+        style="@style/welcome"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/welcome_to"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/foodhub_text"
+        style="@style/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/foodhub"
+        android:textColor="@color/orange"
+        app:layout_constraintStart_toStartOf="@+id/welcome_to_text"
+        app:layout_constraintTop_toBottomOf="@+id/welcome_to_text"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/intro_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/intro_info"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/foodhub_text"
+        app:layout_constraintTop_toBottomOf="@+id/foodhub_text" />
+
+    <TextView
+        android:id="@+id/sign_in_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="200dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/sign_in_text"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/welcome_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+    <ImageView
+        android:id="@+id/sign_in_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleX="0.75"
+        app:layout_constraintBottom_toBottomOf="@+id/sign_in_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sign_in_text"
+        app:srcCompat="@drawable/white_line" />
+
+    <Button
+        android:id="@+id/sign_in_fb"
+        style="@style/sign_in_with_button"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="12dp"
+        android:drawableLeft="@drawable/fb_logo"
+        android:text="Facebook"
+        android:textSize="12sp"
+        app:cornerRadius="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_in_text"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/sign_in_gg"
+        style="@style/sign_in_with_button"
+        android:layout_marginEnd="36dp"
+        android:drawableLeft="@drawable/gg_logo"
+        android:text="Google"
+        android:textSize="12sp"
+        app:cornerRadius="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sign_in_fb" />
+
+    <Button
+        android:id="@+id/start_w_mail_phone"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#33FFFFFF"
+        android:fontFamily="sans-serif-medium"
+        android:stateListAnimator="@null"
+        android:text="@string/start_with"
+        android:textAllCaps="false"
+        app:cornerRadius="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/sign_in_gg"
+        app:layout_constraintStart_toStartOf="@+id/sign_in_fb"
+        app:layout_constraintTop_toBottomOf="@+id/sign_in_fb"
+        app:strokeColor="@color/white"
+        app:strokeWidth="2dp" />
+
+    <TextView
+        android:id="@+id/question_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/question_account"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/sign_in"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/welcome_background"
+        app:layout_constraintTop_toBottomOf="@+id/start_w_mail_phone" />
+
+    <TextView
+        android:id="@+id/sign_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_in_account"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/welcome_background"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/question_account"
+        app:layout_constraintTop_toTopOf="@+id/question_account" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
