@@ -9,7 +9,9 @@
     <string name="sign_in_account"><u>Sign in</u></string>
     <string name="skip_button_text">Skip</string>
     <string name="verification_description">Please type the verification code sent to\nprelookstudio@gmail.com</string>
-    <string name="big_message_one_text">Browse your menu\nand order directly</string>
-    <string name="small_message_one_text">Our app can send you everywhere, even\nspace. For only $2.99 per month</string>
+    <string name="big_message_1_text">Browse your menu\nand order directly</string>
+    <string name="small_message_onboarding_text">Our app can send you everywhere, even\nspace. For only $2.99 per month</string>
     <string name="login_question_text">Don\'t have an account?</string>
+    <string name="big_message_2_text">Even to space with\nus! Together</string>
+    <string name="big_message_3_text">Pickup delivery at\nyour door</string>
 </resources>
