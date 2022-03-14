@@ -42,6 +42,7 @@
         android:id="@+id/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
         android:text="Login"
         android:textColor="@color/orange"
         android:textStyle="bold"
@@ -54,6 +55,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
+        android:fontFamily="sans-serif-medium"
         android:text="@string/question_account"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="@+id/sign_up_button"
@@ -63,11 +65,11 @@
         android:id="@+id/email_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="24dp"
         android:fontFamily="sans-serif-medium"
         android:text="E-mail"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName_sign_up"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName_sign_up" />
 
     <ImageView
         android:id="@+id/decor_circle_top"
@@ -84,7 +86,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="sans-serif-medium"
         android:text="Sign Up"
         android:textColor="@color/black"
@@ -96,21 +98,22 @@
         android:id="@+id/full_name_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="24dp"
         android:fontFamily="sans-serif-medium"
         android:text="Full Name"
         app:layout_constraintStart_toStartOf="@+id/sign_up_title"
         app:layout_constraintTop_toBottomOf="@+id/sign_up_title" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/editTextTextPersonName_sign_up"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
-        android:background="@drawable/sign_up_text_input"
+        android:background="@drawable/text_box_orange"
         android:ems="10"
+        android:fontFamily="sans-serif-medium"
         android:hint="your full name"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
@@ -119,13 +122,13 @@
         app:layout_constraintTop_toBottomOf="@+id/full_name_text" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/editTextTextEmailAddress_sign_up"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
-        android:background="@drawable/sign_up_text_input"
+        android:background="@drawable/text_box_orange"
         android:ems="10"
         android:fontFamily="sans-serif-medium"
         android:hint="your e-mail address"
@@ -136,14 +139,15 @@
         app:layout_constraintTop_toBottomOf="@+id/email_text" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/editTextTextPassword__sign_up"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
-        android:background="@drawable/sign_up_text_input"
+        android:background="@drawable/text_box_orange"
         android:ems="10"
+        android:fontFamily="sans-serif-medium"
         android:hint="your password"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
@@ -155,11 +159,11 @@
         android:id="@+id/password_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="24dp"
         android:fontFamily="sans-serif-medium"
         android:text="Password"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+        app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress_sign_up"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress_sign_up" />
 
     <Button
         android:id="@+id/sign_up_button"
