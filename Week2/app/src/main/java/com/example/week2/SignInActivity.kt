@@ -12,8 +12,9 @@ import android.widget.Toast
 class SignInActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.e("SIGN-IN", "onCreate")
         setContentView(R.layout.activity_login)
+
+        Log.e("SIGN-IN", "onCreate")
 
         val sign_in_back_button = findViewById<ImageButton>(R.id.sign_in_back_button)
         sign_in_back_button.setOnClickListener {
@@ -23,6 +24,7 @@ class SignInActivity : AppCompatActivity() {
         val login_mail = findViewById<EditText>(R.id.editTextTextEmailAddress_login)
         val login_password = findViewById<EditText>(R.id.editTextTextPassword_login)
         val login_button = findViewById<Button>(R.id.login_button)
+
 
         login_button.setOnClickListener {
             if (login_mail.text.toString().trim() == "ronaldo@gmail.com" && login_password.text.toString().trim() == "123456") {
@@ -34,12 +36,11 @@ class SignInActivity : AppCompatActivity() {
                 bundle.putString(Constants.KEY_PASSWORD, login_password.text.toString().trim())
                 intent.putExtras(bundle)
                 startActivity(intent)
-            }
-
-            else {
+            } else {
                 Toast.makeText(this@SignInActivity, "Login failed", Toast.LENGTH_SHORT).show()
             }
         }
+
 
 
     }
