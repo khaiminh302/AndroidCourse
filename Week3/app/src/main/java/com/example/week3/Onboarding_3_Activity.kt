@@ -10,7 +10,7 @@ class Onboarding_3_Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_onboarding_3)
 
-        val nextButton = findViewById<ImageButton>(R.id.next_button_3)
+        val nextButton = findViewById<ImageButton>(R.id.btn_next_3)
         nextButton.setOnClickListener {
             val intent = Intent (this@Onboarding_3_Activity, WelcomeActivity::class.java)
             startActivity(intent)

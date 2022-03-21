@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/profile_background"
+        android:id="@+id/imv_profile_bg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scaleType="centerCrop"
@@ -16,7 +16,7 @@
         app:srcCompat="@drawable/profile_top_bg" />
 
     <ImageView
-        android:id="@+id/user_picture"
+        android:id="@+id/imv_user_picture"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
@@ -26,7 +26,7 @@
         app:srcCompat="@drawable/profile_picture" />
 
     <TextView
-        android:id="@+id/user_name"
+        android:id="@+id/tv_user_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
@@ -34,22 +34,22 @@
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/user_picture"
+        app:layout_constraintBottom_toBottomOf="@+id/imv_user_picture"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/edit_profile_text"
+        android:id="@+id/tv_edit_profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Edit Profile"
-        app:layout_constraintEnd_toEndOf="@+id/user_name"
-        app:layout_constraintStart_toStartOf="@+id/user_name"
-        app:layout_constraintTop_toBottomOf="@+id/user_name" />
+        app:layout_constraintEnd_toEndOf="@+id/tv_user_name"
+        app:layout_constraintStart_toStartOf="@+id/tv_user_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_user_name" />
 
     <TextView
-        android:id="@+id/textView_profile_full_name_label"
+        android:id="@+id/tv_full_name_label_profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -57,10 +57,10 @@
         android:fontFamily="sans-serif-medium"
         android:text="Full name"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_profile_text" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_edit_profile" />
 
     <TextView
-        android:id="@+id/textView_profile_full_name"
+        android:id="@+id/tv_full_name_profile"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginStart="32dp"
@@ -72,10 +72,10 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_profile_full_name_label" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_full_name_label_profile" />
 
     <TextView
-        android:id="@+id/textView_profile_email_label"
+        android:id="@+id/tv_email_label_profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -83,10 +83,10 @@
         android:fontFamily="sans-serif-medium"
         android:text="E-mail"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_profile_full_name" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_full_name_profile" />
 
     <TextView
-        android:id="@+id/textView_profile_email"
+        android:id="@+id/tv_email_profile"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginStart="32dp"
@@ -99,10 +99,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_profile_email_label" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_email_label_profile" />
 
     <TextView
-        android:id="@+id/textView_profile_phone_label"
+        android:id="@+id/tv_phone_label_profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -110,10 +110,10 @@
         android:fontFamily="sans-serif-medium"
         android:text="Phone"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_profile_email" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_email_profile" />
 
     <TextView
-        android:id="@+id/textView_profile_phone"
+        android:id="@+id/tv_phone_profile"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginStart="32dp"
@@ -126,6 +126,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_profile_phone_label" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_phone_label_profile" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,23 +6,25 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.TextView
+import androidx.databinding.DataBindingUtil
+import com.example.week3.databinding.ActivityWelcomeBinding
 
 class WelcomeActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityWelcomeBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Log.e("WELCOME", "onCreate")
-        setContentView(R.layout.activity_welcome)
 
-        val start_sign_up = findViewById<Button>(R.id.start_w_mail_phone)
-        start_sign_up.setOnClickListener {
-            val intent = Intent (this@WelcomeActivity, SignUpActivity::class.java)
-            startActivity(intent)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_welcome)
+
+        binding.btnStartWMailPhone.setOnClickListener {
+            startActivity( Intent(this@WelcomeActivity, SignUpActivity::class.java))
         }
 
-        val sign_in = findViewById<TextView>(R.id.sign_in)
-        sign_in.setOnClickListener {
-            val intent = Intent (this@WelcomeActivity, SignInActivity::class.java)
-            startActivity(intent)
+        binding.tvSignIn.setOnClickListener {
+            startActivity( Intent(this@WelcomeActivity, SignInActivity::class.java))
         }
 
     }

@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/onboarding_3_background"
+        android:id="@+id/imv_onboarding_3_bg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scaleType="centerInside"
@@ -16,7 +16,7 @@
         app:srcCompat="@drawable/onboarding_3_bg" />
 
     <ImageView
-        android:id="@+id/image_swipe_dot_last"
+        android:id="@+id/imv_swipe_dot_last"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="280dp"
@@ -26,7 +26,7 @@
         app:srcCompat="@drawable/swipe_dot_last" />
 
     <TextView
-        android:id="@+id/big_message_3"
+        android:id="@+id/tv_big_message_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -37,29 +37,29 @@
         android:textSize="32sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_swipe_dot_last" />
+        app:layout_constraintTop_toBottomOf="@+id/imv_swipe_dot_last" />
 
     <TextView
-        android:id="@+id/small_message_3"
+        android:id="@+id/tv_small_message_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:text="@string/small_message_onboarding_text"
         android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="@+id/big_message_3"
-        app:layout_constraintStart_toStartOf="@+id/big_message_3"
-        app:layout_constraintTop_toBottomOf="@+id/big_message_3" />
+        app:layout_constraintEnd_toEndOf="@+id/tv_big_message_3"
+        app:layout_constraintStart_toStartOf="@+id/tv_big_message_3"
+        app:layout_constraintTop_toBottomOf="@+id/tv_big_message_3" />
 
     <ImageButton
-        android:id="@+id/next_button_3"
+        android:id="@+id/btn_next_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="next button"
-        app:layout_constraintEnd_toEndOf="@+id/small_message_3"
-        app:layout_constraintStart_toStartOf="@+id/small_message_3"
-        app:layout_constraintTop_toBottomOf="@+id/small_message_3"
+        app:layout_constraintEnd_toEndOf="@+id/tv_small_message_3"
+        app:layout_constraintStart_toStartOf="@+id/tv_small_message_3"
+        app:layout_constraintTop_toBottomOf="@+id/tv_small_message_3"
         app:srcCompat="@drawable/next_round_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
