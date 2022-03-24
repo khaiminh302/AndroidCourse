@@ -4,71 +4,72 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ImageButton
+
 import android.widget.Toast
+import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModelProvider
+import com.example.week3.databinding.ActivitySignInBinding
 
 class SignInActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivitySignInBinding
+    private lateinit var viewModel: SignInViewModel
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.e("SIGN-IN", "onCreate")
 
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_sign_in)
+        viewModel = ViewModelProvider(this).get(SignInViewModel::class.java)
 
-        setContentView(R.layout.activity_sign_in)
+        val bundle = intent.extras
 
-        val sign_in_back_button = findViewById<ImageButton>(R.id.imbtn_back)
-        sign_in_back_button.setOnClickListener {
+        binding.imbtnBack.setOnClickListener {
             finish()
         }
 
-        val login_mail = findViewById<EditText>(R.id.edt_email_sign_in)
-        val login_password = findViewById<EditText>(R.id.edt_password_sign_in)
-        val login_button = findViewById<Button>(R.id.btn_sign_in)
+        binding.btnSignIn.setOnClickListener {
+            bundle?.let {
+                val user = it.getParcelable(Constants.KEY_USER) as? User
+                val loginMail = binding.edtEmailSignIn.text.toString().trim()
+                val loginPassword = binding.edtPasswordSignIn.text.toString().trim()
 
-
-        login_button.setOnClickListener {
-            if (login_mail.text.toString().trim() == "ronaldo@gmail.com" && login_password.text.toString().trim() == "123456") {
-                Toast.makeText(this@SignInActivity, "Login successfully", Toast.LENGTH_SHORT).show()
-
-                val intent = Intent(this@SignInActivity, ProfileActivity::class.java)
-                val bundle = Bundle()
-                bundle.putString(Constants.KEY_MAIL, login_mail.text.toString().trim())
-                bundle.putString(Constants.KEY_PASSWORD, login_password.text.toString().trim())
-                intent.putExtras(bundle)
-                startActivity(intent)
-            } else {
-                Toast.makeText(this@SignInActivity, "Login failed", Toast.LENGTH_SHORT).show()
+                viewModel.isSignInSuccess(user, loginMail, loginPassword)
             }
         }
 
+        listenSignInSuccess(bundle)
+        listenSignInError()
 
 
     }
 
+    private fun listenSignInSuccess(bundle: Bundle?) {
+        viewModel.successSignInLiveData.observe(this) {
+            if (it) {
+                Toast.makeText(this, "Sign in thành công", Toast.LENGTH_SHORT).show()
 
-//    override fun onStart() {
-//        super.onStart()
-//        Log.e("SIGN-IN", "onStart")
-//    }
-//
-//    override fun onResume() {
-//        super.onResume()
-//        Log.e("SIGN-IN", "onResume")
-//    }
-//
-//    override fun onDestroy() {
-//        super.onDestroy()
-//        Log.e("SIGN-IN", "onDestroy")
-//    }
-//
-//    override fun onPause() {
-//        super.onPause()
-//        Log.e("SIGN-IN", "onPause")
-//    }
-//
-//    override fun onStop() {
-//        super.onStop()
-//        Log.e("SIGN-IN", "onStop")
-//    }
+                bundle?.let {
+                    val intent = Intent(this, ProfileActivity::class.java)
+                    val bundleToProfile = Bundle()
+
+                    val user = it.getParcelable(Constants.KEY_USER) as? User
+
+                    bundleToProfile.putParcelable(
+                        Constants.KEY_USER,
+                        User(user?.name.toString(), user?.email.toString(), user?.password.toString())
+                    )
+                    intent.putExtras(bundleToProfile)
+                    startActivity(intent)
+                }
+            }
+        }
+    }
+
+
+    private fun listenSignInError() {
+        viewModel.errorSignInLiveData.observe(this) {
+            if (it != null) { Toast.makeText(this, it, Toast.LENGTH_SHORT).show() }
+        }
+    }
+
 }

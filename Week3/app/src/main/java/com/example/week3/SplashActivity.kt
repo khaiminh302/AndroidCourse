@@ -8,6 +8,7 @@ class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         startActivity(Intent(this@SplashActivity, Onboarding_1_Activity::class.java))
+//        startActivity(Intent(this@SplashActivity, WelcomeActivity::class.java))
         finish()
     }
 }

@@ -6,26 +6,28 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.databinding.DataBindingUtil
+import com.example.week3.databinding.ActivityProfileBinding
 
 class ProfileActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityProfileBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_profile)
 
-        val tvEditProfile: TextView = findViewById(R.id.tv_edit_profile)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_profile)
 
-        val tvName: TextView = findViewById(R.id.tv_full_name_profile)
-        tvName.text = findViewById<TextView>(R.id.tv_user_name).text
+        val bundle = intent.extras
+        val user = bundle?.getParcelable(Constants.KEY_USER) as? User
 
-        val tvEmail: TextView = findViewById(R.id.tv_email_profile)
-        tvEmail.text = "ronaldo@gmail.com"
+        binding.tvFullNameProfile.text = user?.name
+        binding.tvEmailProfile.text = user?.email
+        binding.tvUserName.text = binding.tvFullNameProfile.text
 
-        val tvPhone: TextView = findViewById(R.id.tv_phone_profile)
-
-        tvEditProfile.setOnClickListener {
+        binding.tvEditProfile.setOnClickListener {
             val mDialogView = LayoutInflater.from(this).inflate(R.layout.dialog_edit_profile, null)
             val mBuilder = AlertDialog.Builder(this).setView(mDialogView)
             val editProfileDialog = mBuilder.show()
@@ -35,20 +37,20 @@ class ProfileActivity : AppCompatActivity() {
             val editTextPhone = mDialogView.findViewById<EditText>(R.id.edt_dialog_phone)
 
             // get current info to dialog editTextView
-            editTextName.setText(tvName.text)
-            editTextEmail.setText(tvEmail.text)
-            editTextPhone.setText(tvPhone.text)
+            editTextName.setText(binding.tvFullNameProfile.text)
+            editTextEmail.setText(binding.tvEmailProfile.text)
+            editTextPhone.setText( binding.tvPhoneProfile.text)
 
             mDialogView.findViewById<Button>(R.id.btn_okay).setOnClickListener{
                 if (editTextName.text.toString() == "" || editTextEmail.text.toString() == "" || editTextPhone.text.toString() == "") {
-                    Log.e("DIALOG", "Edit is empty")
                     Toast.makeText(this, "All field must not be empty", Toast.LENGTH_SHORT).show()
+                    Log.e("DIALOG", "Edit is empty")
                 } else {
-                    tvName.text = editTextName.text.toString().trim()
-                    findViewById<TextView>(R.id.tv_user_name).text = tvName.text
+                    binding.tvFullNameProfile.text = editTextName.text.toString().trim()
+                    binding.tvUserName.text = binding.tvFullNameProfile.text
 
-                    tvEmail.text = editTextEmail.text.toString().trim()
-                    tvPhone.text = editTextPhone.text.toString().trim()
+                    binding.tvEmailProfile.text = editTextEmail.text.toString().trim()
+                    binding.tvPhoneProfile.text = editTextPhone.text.toString().trim()
                     editProfileDialog.dismiss()
                 }
             }
