@@ -3,8 +3,6 @@ package com.example.week3
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
@@ -21,46 +19,28 @@ class SignInActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_sign_in)
         viewModel = ViewModelProvider(this).get(SignInViewModel::class.java)
 
-        val bundle = intent.extras
-
-        binding.imbtnBack.setOnClickListener {
-            finish()
-        }
 
         binding.btnSignIn.setOnClickListener {
-            bundle?.let {
-                val user = it.getParcelable(Constants.KEY_USER) as? User
-                val loginMail = binding.edtEmailSignIn.text.toString().trim()
-                val loginPassword = binding.edtPasswordSignIn.text.toString().trim()
+            val loginMail = binding.edtEmailSignIn.text.toString().trim()
+            val loginPassword = binding.edtPasswordSignIn.text.toString().trim()
 
-                viewModel.isSignInSuccess(user, loginMail, loginPassword)
-            }
+            viewModel.isSignInSuccess(loginMail, loginPassword)
         }
 
-        listenSignInSuccess(bundle)
+        listenSignInSuccess()
         listenSignInError()
 
 
     }
 
-    private fun listenSignInSuccess(bundle: Bundle?) {
+    private fun listenSignInSuccess() {
         viewModel.successSignInLiveData.observe(this) {
             if (it) {
                 Toast.makeText(this, "Sign in thành công", Toast.LENGTH_SHORT).show()
 
-                bundle?.let {
-                    val intent = Intent(this, ProfileActivity::class.java)
-                    val bundleToProfile = Bundle()
+                val intent = Intent(this, ProfileActivity::class.java)
+                startActivity(intent)
 
-                    val user = it.getParcelable(Constants.KEY_USER) as? User
-
-                    bundleToProfile.putParcelable(
-                        Constants.KEY_USER,
-                        User(user?.name.toString(), user?.email.toString(), user?.password.toString())
-                    )
-                    intent.putExtras(bundleToProfile)
-                    startActivity(intent)
-                }
             }
         }
     }

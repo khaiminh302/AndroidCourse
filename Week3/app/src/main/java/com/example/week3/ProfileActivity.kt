@@ -20,12 +20,7 @@ class ProfileActivity : AppCompatActivity() {
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_profile)
 
-        val bundle = intent.extras
-        val user = bundle?.getParcelable(Constants.KEY_USER) as? User
-
-        binding.tvFullNameProfile.text = user?.name
-        binding.tvEmailProfile.text = user?.email
-        binding.tvUserName.text = binding.tvFullNameProfile.text
+        accountInfoToLayout()
 
         binding.tvEditProfile.setOnClickListener {
             val mDialogView = LayoutInflater.from(this).inflate(R.layout.dialog_edit_profile, null)
@@ -44,13 +39,17 @@ class ProfileActivity : AppCompatActivity() {
             mDialogView.findViewById<Button>(R.id.btn_okay).setOnClickListener{
                 if (editTextName.text.toString() == "" || editTextEmail.text.toString() == "" || editTextPhone.text.toString() == "") {
                     Toast.makeText(this, "All field must not be empty", Toast.LENGTH_SHORT).show()
-                    Log.e("DIALOG", "Edit is empty")
-                } else {
-                    binding.tvFullNameProfile.text = editTextName.text.toString().trim()
-                    binding.tvUserName.text = binding.tvFullNameProfile.text
 
-                    binding.tvEmailProfile.text = editTextEmail.text.toString().trim()
-                    binding.tvPhoneProfile.text = editTextPhone.text.toString().trim()
+                } else {
+
+                    DataStore.editAccount(
+                        editTextName.text.toString().trim(),
+                        editTextEmail.text.toString().trim(),
+                        editTextEmail.text.toString().trim(),
+                        editTextPhone.text.toString().trim()
+                    )
+                    accountInfoToLayout()
+
                     editProfileDialog.dismiss()
                 }
             }
@@ -63,6 +62,13 @@ class ProfileActivity : AppCompatActivity() {
 
 
 
+    }
+
+    private fun accountInfoToLayout() {
+        binding.tvFullNameProfile.text = DataStore.getAccountInfo().name
+        binding.tvEmailProfile.text = DataStore.getAccountInfo().email
+        binding.tvPhoneProfile.text = DataStore.getAccountInfo().phone
+        binding.tvUserName.text = binding.tvFullNameProfile.text
     }
 
 

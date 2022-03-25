@@ -46,15 +46,13 @@ class SignUpActivity : AppCompatActivity() {
             if (it) {
                 Toast.makeText(this, "Sign up thành công", Toast.LENGTH_SHORT).show()
 
+                DataStore.createAccount(
+                    binding.edtFullName.text.toString().trim(),
+                    binding.edtEmail.text.toString().trim(),
+                    binding.edtPassword.text.toString().trim()
+                )
+
                 val intent = Intent(this, SignInActivity::class.java)
-                val bundle = Bundle()
-
-                val userSignUpName = binding.edtFullName.text.toString().trim()
-                val userSignUpEmail =  binding.edtEmail.text.toString().trim()
-                val userSignUpPassword = binding.edtPassword.text.toString().trim()
-
-                bundle.putParcelable(Constants.KEY_USER, User(userSignUpName, userSignUpEmail, userSignUpPassword))
-                intent.putExtras(bundle)
                 startActivity(intent)
             }
         }

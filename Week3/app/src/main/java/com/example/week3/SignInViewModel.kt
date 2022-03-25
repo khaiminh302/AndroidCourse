@@ -16,16 +16,16 @@ class SignInViewModel: ViewModel() {
 
 
 
-    fun isSignInSuccess(user: User?, email: String, password: String) {
+    fun isSignInSuccess(email: String, password: String) {
         _successSignInLiveData.postValue(false)
         _errorSignInLiveData.postValue(null)
 
-        if (email != user?.email) {
+        if (email != DataStore.getAccountInfo().email) {
             _errorSignInLiveData.postValue("Email không tồn tại")
             return
         }
 
-        if (password != user?.password) {
+        if (password != DataStore.getAccountInfo().password) {
             _errorSignInLiveData.postValue("Password không đúng")
             return
         }
