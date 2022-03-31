@@ -38,7 +38,7 @@ class SignInActivity : AppCompatActivity() {
             if (it) {
                 Toast.makeText(this, "Sign in thành công", Toast.LENGTH_SHORT).show()
 
-                val intent = Intent(this, ProfileActivity::class.java)
+                val intent = Intent(this, ListRestaurant::class.java)
                 startActivity(intent)
 
             }

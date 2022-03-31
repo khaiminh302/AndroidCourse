@@ -6,6 +6,8 @@ import android.os.Bundle
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+
 //        setContentView(R.layout.activity_onboarding_1)
 //        setContentView(R.layout.activity_onboarding_2)
 //        setContentView(R.layout.activity_onboarding_3)

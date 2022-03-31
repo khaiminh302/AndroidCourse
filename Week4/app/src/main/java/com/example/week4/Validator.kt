@@ -1,5 +1,7 @@
 package com.example.week4
 
+import java.util.regex.Pattern
+
 class Validator {
     companion object {
         fun isEmailValid(email: String): Boolean {
@@ -7,7 +9,14 @@ class Validator {
         }
 
         fun isPasswordValid(password: String): Boolean {
-            return password.length in 8..10
+            val passwordPattern = "^(?=.*[0-9])(?=.*[A-Z])(?=.*[@#$%^&+=!])(?=\\S+$).{7,}$"
+            val pattern = Pattern.compile(passwordPattern)
+            val matcher = pattern.matcher(password)
+            return matcher.matches()
+
+
+
+
         }
 
         fun isNameValid(name: String): Boolean {
@@ -15,3 +24,5 @@ class Validator {
         }
     }
 }
+
+
