@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".HomeRestaurantFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_restaurant"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/btn_layout_grid"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text="Grid"
+            android:textAllCaps="false"
+            app:cornerRadius="50sp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_layout_linear"
+            app:layout_constraintEnd_toEndOf="@+id/btn_layout_linear" />
+
+        <Button
+            android:id="@+id/btn_layout_linear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="Linear"
+            android:textAllCaps="false"
+            app:cornerRadius="50sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/btn_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:textAllCaps="false"
+            app:cornerRadius="50sp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_layout_grid"
+            app:layout_constraintEnd_toEndOf="@+id/btn_layout_grid" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".WelcomeFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+        <ImageView
+            android:id="@+id/imv_welcome_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:contentDescription="background image"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/background" />
+
+        <ImageView
+            android:id="@+id/imv_welcome_bg_gradient"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="TODO"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="@+id/imv_welcome_bg"
+            app:layout_constraintTop_toTopOf="@+id/imv_welcome_bg"
+            app:srcCompat="@drawable/background_gradient" />
+
+        <Button
+            android:id="@+id/btn_skip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/skip_button_text"
+            android:textAllCaps="false"
+            android:textColor="@color/orange"
+            app:cornerRadius="27dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/tv_welcome_to"
+            style="@style/welcome"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="100dp"
+            android:text="@string/welcome_to"
+            android:textColor="@color/black"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_foodhub"
+            style="@style/welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/foodhub"
+            android:textColor="@color/orange"
+            app:layout_constraintStart_toStartOf="@+id/tv_welcome_to"
+            app:layout_constraintTop_toBottomOf="@+id/tv_welcome_to"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/tv_intro_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/intro_info"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_foodhub"
+            app:layout_constraintTop_toBottomOf="@+id/tv_foodhub" />
+
+        <TextView
+            android:id="@+id/tv_sign_in_with"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="200dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/sign_in_text"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imv_welcome_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="TextContrastCheck" />
+
+        <ImageView
+            android:id="@+id/imv_white_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_sign_in_with"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_sign_in_with"
+            app:srcCompat="@drawable/new_white_line" />
+
+        <Button
+            android:id="@+id/btn_sign_in_fb"
+            style="@style/sign_in_with_button"
+            android:layout_marginTop="12dp"
+            android:drawableLeft="@drawable/fb_logo"
+            android:text="Facebook"
+            android:textSize="12sp"
+            app:cornerRadius="30dp"
+            app:layout_constraintStart_toStartOf="@+id/imv_white_line"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sign_in_with"
+            tools:ignore="TextContrastCheck" />
+
+        <Button
+            android:id="@+id/btn_sign_in_gg"
+            style="@style/sign_in_with_button"
+            android:drawableLeft="@drawable/gg_logo"
+            android:text="Google"
+            android:textSize="12sp"
+            app:cornerRadius="30dp"
+            app:layout_constraintEnd_toEndOf="@+id/imv_white_line"
+            app:layout_constraintTop_toTopOf="@+id/btn_sign_in_fb" />
+
+        <Button
+            android:id="@+id/btn_start_w_mail_phone"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#33FFFFFF"
+            android:fontFamily="sans-serif-medium"
+            android:stateListAnimator="@null"
+            android:text="@string/start_with"
+            android:textAllCaps="false"
+            app:cornerRadius="30dp"
+            app:layout_constraintEnd_toEndOf="@+id/btn_sign_in_gg"
+            app:layout_constraintStart_toStartOf="@+id/btn_sign_in_fb"
+            app:layout_constraintTop_toBottomOf="@+id/btn_sign_in_fb"
+            app:strokeColor="@color/white"
+            app:strokeWidth="2dp" />
+
+        <TextView
+            android:id="@+id/tv_question_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/question_account"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toStartOf="@+id/tv_sign_in"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imv_welcome_bg"
+            app:layout_constraintTop_toBottomOf="@+id/btn_start_w_mail_phone" />
+
+        <TextView
+            android:id="@+id/tv_sign_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_in_account"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/imv_welcome_bg"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tv_question_account"
+            app:layout_constraintTop_toTopOf="@+id/tv_question_account" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
