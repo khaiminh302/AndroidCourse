@@ -65,7 +65,7 @@ class HomeRestaurantFragment : Fragment() {
 
 
         // button to profile
-        binding.btnProfile.setOnClickListener {
+        binding.imvProfileCorner.setOnClickListener {
             val controller = findNavController()
             controller.navigate(R.id.action_homeRestaurantFragment_to_profileFragment)
         }

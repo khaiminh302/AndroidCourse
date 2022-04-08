@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.week5.data.DataStoreAccount
 import com.example.week5.databinding.FragmentProfileBinding
 
@@ -35,6 +36,11 @@ class ProfileFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         accountInfoToLayout()
+
+        binding.btnLogout.setOnClickListener {
+            val controller = findNavController()
+            controller.navigate(R.id.action_profileFragment_to_welcomeFragment)
+        }
 
     }
 

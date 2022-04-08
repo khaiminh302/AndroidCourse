@@ -11,16 +11,38 @@
 
         <!-- TODO: Update blank fragment layout -->
 
+        <TextView
+            android:id="@+id/tv_my_restaurant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="My restaurant"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imv_profile_corner"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_my_restaurant"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_my_restaurant"
+            app:srcCompat="@drawable/profile_avatar_corner" />
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_restaurant"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_my_restaurant" />
 
         <Button
             android:id="@+id/btn_layout_grid"
@@ -43,16 +65,6 @@
             app:cornerRadius="50sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
-
-        <Button
-            android:id="@+id/btn_profile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Profile"
-            android:textAllCaps="false"
-            app:cornerRadius="50sp"
-            app:layout_constraintBottom_toTopOf="@+id/btn_layout_grid"
-            app:layout_constraintEnd_toEndOf="@+id/btn_layout_grid" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
