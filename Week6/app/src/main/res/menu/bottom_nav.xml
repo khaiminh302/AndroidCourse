@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/get_now_playing"
+        android:icon="@drawable/ic_now_playing"
+        app:showAsAction="always"
+        android:title="Now Playing" />
+
+    <item android:id="@+id/get_top_rated"
+        android:icon="@drawable/ic_top_rated"
+        app:showAsAction="always"
+        android:title="Top Rated" />
+
+</menu>
