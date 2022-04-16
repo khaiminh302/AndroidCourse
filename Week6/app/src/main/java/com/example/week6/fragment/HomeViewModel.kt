@@ -35,4 +35,15 @@ class HomeViewModel : ViewModel() {
             _movieData.postValue(movieResp.results!!)
         }
     }
+
+    fun getTopRateMovie() {
+        viewModelScope.launch {
+            val movieResp = MovieRestClient.getInstance().api.listTopRateMovies(
+                language = "en-US",
+                page = 1
+            )
+
+            _movieData.postValue(movieResp.results!!)
+        }
+    }
 }

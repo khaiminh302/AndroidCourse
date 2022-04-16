@@ -13,9 +13,15 @@ interface MovieApis {
     ): MovieResp
 
 
-
     @GET("movie/upcoming")
     suspend fun listUpComingMovies(
+        @Query("language") language: String,
+        @Query("page") page: Int,
+    ): MovieResp
+
+
+    @GET("movie/top_rated")
+    suspend fun listTopRateMovies(
         @Query("language") language: String,
         @Query("page") page: Int,
     ): MovieResp

@@ -36,7 +36,7 @@ class HomeFragment : Fragment() {
         binding.bottomNavigationView.setOnNavigationItemSelectedListener {
             when(it.itemId) {
                 R.id.get_now_playing -> viewModel.getNowPlaying()
-                R.id.get_top_rated -> viewModel.getComingUpMovie()
+                R.id.get_top_rated -> viewModel.getTopRateMovie()
             }
             true
         }
