@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/10_Rapid backup/android/Password/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2265" />
+        <entry key="..\:/10_Rapid backup/android/Password/app/src/main/res/drawable/circle_button.xml" value="0.3725" />
+        <entry key="..\:/10_Rapid backup/android/Password/app/src/main/res/drawable/edit_container.xml" value="0.3725" />
+        <entry key="..\:/10_Rapid backup/android/Password/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2265" />
+        <entry key="..\:/10_Rapid backup/android/Password/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.2105" />
+        <entry key="..\:/10_Rapid backup/android/Password/app/src/main/res/drawable/rounded_text.xml" value="0.3725" />
+        <entry key="..\:/10_Rapid backup/android/Password/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/10_Rapid backup/android/Password/app/src/main/res/layout/drop_down_item.xml" value="0.27395833333333336" />
+        <entry key="..\:/10_Rapid backup/android/Password/app/src/main/res/layout/fragment_change_master_key.xml" value="0.371875" />
+        <entry key="..\:/10_Rapid backup/android/Password/app/src/main/res/layout/fragment_edit_password.xml" value="0.25" />
+        <entry key="..\:/10_Rapid backup/android/Password/app/src/main/res/layout/fragment_enter_account.xml" value="0.26979166666666665" />
+        <entry key="..\:/10_Rapid backup/android/Password/app/src/main/res/layout/fragment_enter_app.xml" value="0.33" />
+        <entry key="..\:/10_Rapid backup/android/Password/app/src/main/res/layout/fragment_home_screen.xml" value="0.26979166666666665" />
+        <entry key="..\:/10_Rapid backup/android/Password/app/src/main/res/layout/fragment_password.xml" value="0.25" />
+        <entry key="..\:/10_Rapid backup/android/Password/app/src/main/res/layout/fragment_random_password_generate.xml" value="0.27395833333333336" />
+        <entry key="..\:/10_Rapid backup/android/Password/app/src/main/res/layout/fragment_setting.xml" value="0.27395833333333336" />
+        <entry key="..\:/10_Rapid backup/android/Password/app/src/main/res/layout/item_account_saved.xml" value="0.33" />
+        <entry key="..\:/10_Rapid backup/android/Password/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.22" />
+        <entry key="..\:/Lap Trinh Android/Android Homework/Password/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="..\:/Lap Trinh Android/Android Homework/Password/app/src/main/res/drawable/circle_button.xml" value="0.2425" />
+        <entry key="..\:/Lap Trinh Android/Android Homework/Password/app/src/main/res/drawable/edit_container.xml" value="0.2035" />
+        <entry key="..\:/Lap Trinh Android/Android Homework/Password/app/src/main/res/drawable/gray_txt_contain.xml" value="0.2035" />
+        <entry key="..\:/Lap Trinh Android/Android Homework/Password/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/Lap Trinh Android/Android Homework/Password/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="..\:/Lap Trinh Android/Android Homework/Password/app/src/main/res/drawable/rounded_text.xml" value="0.1965" />
+        <entry key="..\:/Lap Trinh Android/Android Homework/Password/app/src/main/res/drawable/space_line.xml" value="0.2425" />
+        <entry key="..\:/Lap Trinh Android/Android Homework/Password/app/src/main/res/drawable/warning_generate.xml" value="0.2035" />
+        <entry key="..\:/Lap Trinh Android/Android Homework/Password/app/src/main/res/layout/activity_main.xml" value="0.16" />
+        <entry key="..\:/Lap Trinh Android/Android Homework/Password/app/src/main/res/layout/drop_down_item.xml" value="0.27447916666666666" />
+        <entry key="..\:/Lap Trinh Android/Android Homework/Password/app/src/main/res/layout/fragment_change_master_key.xml" value="0.27447916666666666" />
+        <entry key="..\:/Lap Trinh Android/Android Homework/Password/app/src/main/res/layout/fragment_edit_password.xml" value="0.27447916666666666" />
+        <entry key="..\:/Lap Trinh Android/Android Homework/Password/app/src/main/res/layout/fragment_enter_account.xml" value="0.27447916666666666" />
+        <entry key="..\:/Lap Trinh Android/Android Homework/Password/app/src/main/res/layout/fragment_enter_app.xml" value="0.264" />
+        <entry key="..\:/Lap Trinh Android/Android Homework/Password/app/src/main/res/layout/fragment_home_screen.xml" value="0.27447916666666666" />
+        <entry key="..\:/Lap Trinh Android/Android Homework/Password/app/src/main/res/layout/fragment_password.xml" value="0.264" />
+        <entry key="..\:/Lap Trinh Android/Android Homework/Password/app/src/main/res/layout/fragment_random_password_generate.xml" value="0.27447916666666666" />
+        <entry key="..\:/Lap Trinh Android/Android Homework/Password/app/src/main/res/layout/fragment_setting.xml" value="0.27447916666666666" />
+        <entry key="..\:/Lap Trinh Android/Android Homework/Password/app/src/main/res/layout/item_account_saved.xml" value="0.27447916666666666" />
+        <entry key="..\:/Lap Trinh Android/Android Homework/Password/app/src/main/res/layout/list_type_account.xml" value="0.27447916666666666" />
+        <entry key="..\:/Lap Trinh Android/Android Homework/Password/app/src/main/res/layout/warning_generate.xml" value="0.27447916666666666" />
+        <entry key="..\:/Lap Trinh Android/Android Homework/Password/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
