@@ -27,29 +27,25 @@ object masterkeySharedStore  {
         return sharedPreferences
     }
 
-    fun isMasterKeyCreated(context: Context): Boolean
-    {
+    fun isMasterKeyCreated(context: Context): Boolean {
         var isMasterKeyExist = createSecurityDataBase(context).getBoolean(MASTERKEY_STATE_KEYWORD, false)
         return isMasterKeyExist
     }
 
 
-     fun isMasterKeyValid(masterkey: String) : Boolean
-     {
+     fun isMasterKeyValid(masterkey: String): Boolean {
          return masterkey.length == 4
      }
 
 
-    fun isMasterKeyCorrect(context: Context, masterKey: String) : Boolean
-    {
+    fun isMasterKeyCorrect(context: Context, masterKey: String) : Boolean {
         val editor : SharedPreferences.Editor = createSecurityDataBase(context).edit()
         var masterkey = createSecurityDataBase(context).getString(MASTERKEY_KEYWORD, "")
         return masterKey == masterkey
     }
 
 
-    fun saveMasterKey(context: Context, MasterKey: String)
-    {
+    fun saveMasterKey(context: Context, MasterKey: String) {
         val editor : SharedPreferences.Editor = createSecurityDataBase(context).edit()
         editor.putString(MASTERKEY_KEYWORD, MasterKey).apply()
         editor.putBoolean(MASTERKEY_STATE_KEYWORD, true).apply()
